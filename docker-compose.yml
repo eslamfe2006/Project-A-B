@@ -3,7 +3,7 @@ services:
   java-testapp:     
     build: ./Java-testapp 
     ports:
-      - "8080:8080"  
+      - "8050:8080"  
     container_name: Java-app
   node-js-1:
     build: ./Nodejs-express-testapp-1
@@ -18,9 +18,9 @@ services:
     container_name: project_node_js-2
 
   nginx:
-    image: reverse-proxy
+    build: ./reverse-proxy
     ports:
-      - "80:80"
+      - "8060:80"
     links:
       - node-js-1
       - node-js-2
