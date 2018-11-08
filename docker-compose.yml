@@ -59,10 +59,10 @@ services:
 
   maven:
     image: maven
-    restart: always
     environment:
       - URL_HUB=http://selenium-hub:4444
       - URL_UI=http://project_node_js-1:7777
+      - URL_UI=http://project_node_js-2:8888
     volumes:
       - ./qa-test:/usr/src
       - ./qa-test/target/surefire-reports:/usr/src/target/surefire-reports/:rw
