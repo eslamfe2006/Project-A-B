@@ -81,7 +81,6 @@ services:
   selenium-report:
     container_name: selenium-report
     image: httpd:2.4
-    restart: always
     ports:
       - "9999:80"
     depends_on:
